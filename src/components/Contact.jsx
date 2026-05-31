@@ -98,7 +98,7 @@ ${formData.message}
       className="relative overflow-hidden bg-slate-950 px-4 sm:px-8 lg:px-16 xl:px-24 py-16 md:py-24"
     >
       {/* Background Ambient Tones */}
-      <div className="absolute top-1/2 left-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500 blur-[140px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl w-full">
         
@@ -111,7 +111,7 @@ ${formData.message}
           className="mx-auto mb-12 md:mb-16 max-w-3xl text-center"
         >
           <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-            Get In <span className="bg-gradient-to-r from-cyan-400-blue-400 bg-clip-text text-transparent">Touch</span>
+            Get In <span className="bg-gradient-to-r from-cyan-400 -blue-400 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="mt-3 text-xs sm:text-sm md:text-base text-slate-400 max-w-xl mx-auto leading-relaxed">
             Have an open role, a project idea, or a technical architecture question? Drop a message or connect directly.
@@ -131,7 +131,7 @@ ${formData.message}
           >
             <motion.div 
               variants={itemVariants}
-              className="rounded-2xl border border-white/10 bg-slate-900/30 p-6 backdrop-blur-xl"
+              className="rounded-2xl border border-gray-900/10 bg-slate-900/30 p-6 backdrop-blur-xl"
             >
               <h3 className="text-base sm:text-lg font-bold text-white tracking-tight mb-2">
                 Direct Communication
@@ -142,44 +142,14 @@ ${formData.message}
               
               <a 
                 href="mailto:abdigemechu83@gmail.com"
-                className="inline-flex items-center gap-3 text-xs sm:text-sm text-cyan-400nt-mono hover:underline truncate max-w-full"
+                className="inline-flex items-center gap-3 text-xs sm:text-sm text-cyan-400 nt-mono hover:underline truncate max-w-full"
               >
                 <FaEnvelope className="text-sm flex-shrink-0" />
                 abdigemechu83@gmail.com
               </a>
             </motion.div>
 
-            {/* Structured Channels Matrix */}
-            <motion.div 
-              variants={itemVariants}
-              className="rounded-2xl sm:border border-white/10 sm:bg-slate-900/30 p-6 backdrop-blur-xl"
-            >
-              {/* <h3 className="text-base sm:text-lg font-bold text-white tracking-tight mb-4">
-                Professional Channels
-              </h3> */}
-              <div className="grid grid-cols-3 gap-3">
-                {[
-              //  { name: "GitHub", icon: <FaGithub />, url: "https://github.com", color: "text-white" },
-                //  { name: "LinkedIn", icon: <FaLinkedin />, url: "https://linkedin.com", color: "text-[#0A66C2]" },
-               //   { name: "Telegram", icon: <FaTelegramPlane />, url: "https://t.me", color: "text-[#24A1DE]" }
-                ].map((channel) => (
-                  <a
-                    key={channel.name}
-                    href={channel.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex flex-col items-center gap-2 rounded-xl border border-white bg-slate-950/50 p-4 transition-all duration-300 hover:border-white hover:bg-slate-900/60"
-                  >
-                    <div className={`text-2xl ${channel.color}`}>
-                      {channel.icon}
-                    </div>
-                    <span className="text-[10px] sm:text-xs font-mono text-slate-400">
-                      {channel.name}
-                    </span>
-                  </a>
-                ))}
-              </div>
-            </motion.div>
+           
           </motion.div>
 
           {/* Right Column: Premium Interactive Form */}
@@ -189,7 +159,7 @@ ${formData.message}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="lg:col-span-7 rounded-2xl sm:border sm:border-white/10 sm:bg-slate-900/30 p-2 sm:p-8 backdrop-blur-xl shadow-xl w-full mx-0"
+            className="lg:col-span-7 rounded-2xl sm:border sm:border-gray-900/10 sm:bg-slate-900/30 p-2 sm:p-8 backdrop-blur-xl shadow-xl w-full mx-0"
           >
             <form onSubmit={handleSubmit} className="space-y-4 w-full">
               <div className="grid gap-3.5 sm:grid-cols-2 w-full">
@@ -203,7 +173,7 @@ ${formData.message}
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full rounded-xl border border-white bg-slate-950/50 px-4 py-3.5 text-base sm:text-sm text-white outline-none transition-colors duration-200 focus:border-cyan-400 appearance-none box-border"
+                    className="w-full rounded-xl border border-gray-900 bg-slate-950/50 px-4 py-3.5 text-base sm:text-sm text-white outline-none transition-colors duration-200 focus:border-cyan-400  appearance-none box-border"
                   />
                 </div>
 
@@ -217,7 +187,7 @@ ${formData.message}
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full rounded-xl border border-white bg-slate-950/50 px-4 py-3.5 text-base sm:text-sm text-white outline-none transition-colors duration-200 focus:border-cyan-400 appearance-none box-border"
+                    className="w-full rounded-xl border border-gray-900 bg-slate-950/50 px-4 py-3.5 text-base sm:text-sm text-white outline-none transition-colors duration-200 focus:border-cyan-400  appearance-none box-border"
                   />
                 </div>
               </div>
@@ -232,7 +202,7 @@ ${formData.message}
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full rounded-xl border border-white bg-slate-950/50 px-4 py-3.5 text-base sm:text-sm text-white outline-none transition-colors duration-200 focus:border-cyan-400 appearance-none box-border"
+                  className="w-full rounded-xl border border-gray-900 bg-slate-950/50 px-4 py-3.5 text-base sm:text-sm text-white outline-none transition-colors duration-200 focus:border-cyan-400  appearance-none box-border"
                 />
               </div>
 
@@ -246,7 +216,7 @@ ${formData.message}
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full resize-none rounded-xl border border-white bg-slate-950/50 px-4 py-5 text-base sm:text-sm text-white outline-none transition-colors duration-200 focus:border-cyan-400 appearance-none box-border"
+                  className="w-full resize-none rounded-xl border border-gray-900 bg-slate-950/50 px-4 py-5 text-base sm:text-sm text-white outline-none transition-colors duration-200 focus:border-cyan-400  appearance-none box-border"
                 />
               </div>
 
@@ -258,7 +228,7 @@ ${formData.message}
                     ? "bg-emerald-500 text-white" 
                     : status === "error" 
                     ? "bg-rose-500 text-white" 
-                    : "bg-cyan-500xt-slate-950 hover:bg-cyan-400ver:shadow-lg hover:shadow-cyan-500 disabled:opacity-50"
+                    : "bg-cyan-500 xt-slate-950 hover:bg-cyan-400 ver:shadow-lg hover:shadow-cyan-500  disabled:opacity-50"
                 }`}
               >
                 {status === "loading" && <FaSpinner className="animate-spin text-base" />}
