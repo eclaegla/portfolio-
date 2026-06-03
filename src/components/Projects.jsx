@@ -14,7 +14,7 @@ const Projects = () => {
     // Automatically dismiss the message clear window
     setTimeout(() => {
       setToastMessage(null);
-    }, 3500);
+    }, 5000);
   };
 
   const containerVariants = {

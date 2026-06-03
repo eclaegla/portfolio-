@@ -71,7 +71,7 @@ const Hero = () => {
             {[
               //{ icon: <FaGithub />, url: "https://github.com" },
            //   { icon: <FaLinkedin />, url: "https://linkedin.com" },
-              { icon: <FaTelegramPlane />, url: "https://t.me" }
+              { icon: <FaTelegramPlane />, url: "https://t.me/hireabdionline" }
             ].map((social, index) => (
               <motion.a
                 key={index}

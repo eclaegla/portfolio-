@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-
+import logo from '../assets/logo.png'
 const navLinks = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10" aria-label="Main Navigation">
-        <div className="mt-4 flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-md px-6 py-4 shadow-xl">
+        <div className="mt-2 flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-md px-6 py-4 shadow-xl">
           
           {/* Logo */}
           <a
@@ -48,7 +48,8 @@ const Navbar = () => {
             className="text-2xl font-bold tracking-wide text-white group"
             aria-label="Abdi Home"
           >
-            Abdi<span className="text-cyan-400 inline-block transition-transform group-hover:translate-x-1">.</span>
+            <img src={logo} class="h-12"/>
+            {/* <span className="text-cyan-400 inline-block transition-transform group-hover:translate-x-1">.</span> */}
           </a>
 
           {/* Desktop Menu */}
